@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://trfw3xht0u0t"]
+
+[ext_resource type="Script" path="res://Level/testing.gd" id="1_pdg3e"]
+[ext_resource type="PackedScene" uid="uid://b0n72sbo62t8e" path="res://PlayerScene/Player.tscn" id="2_h5tvg"]
+[ext_resource type="PackedScene" uid="uid://jqete65bseyw" path="res://PlatformScenes/Placeholderplatform.tscn" id="3_lghec"]
+[ext_resource type="PackedScene" uid="uid://05ywuc8hih17" path="res://PlatformScenes/hideablePlatform.tscn" id="4_okhb1"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_pdg3e")
+new_width = 640.0
+new_height = 480.0
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_h5tvg")]
+position = Vector2(39, 18)
+JUMP_VELOCITY = -600.0
+dashspeed = 1000.0
+
+[node name="Placeholderplatform" parent="." instance=ExtResource("3_lghec")]
+position = Vector2(18, 400)
+scale = Vector2(3.86357, 0.88)
+
+[node name="HideablePlatform" parent="." instance=ExtResource("4_okhb1")]
+position = Vector2(501, 321)
+scale = Vector2(3, 3)
