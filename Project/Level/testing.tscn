@@ -13,12 +13,16 @@ new_height = 480.0
 [node name="CharacterBody2D" parent="." instance=ExtResource("2_h5tvg")]
 position = Vector2(39, 18)
 JUMP_VELOCITY = -600.0
-dashspeed = 1000.0
+dashspeed = 2000.0
 
 [node name="Placeholderplatform" parent="." instance=ExtResource("3_lghec")]
-position = Vector2(18, 400)
-scale = Vector2(3.86357, 0.88)
+position = Vector2(33, 393)
+scale = Vector2(1.46357, 0.88)
 
 [node name="HideablePlatform" parent="." instance=ExtResource("4_okhb1")]
-position = Vector2(501, 321)
-scale = Vector2(3, 3)
+position = Vector2(508, 280)
+scale = Vector2(1.93369, 11.28)
+
+[node name="HideablePlatform2" parent="." instance=ExtResource("4_okhb1")]
+position = Vector2(1018, 564)
+scale = Vector2(6.06752, -2.04426)
