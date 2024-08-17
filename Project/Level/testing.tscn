@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://trfw3xht0u0t"]
+[gd_scene load_steps=6 format=3 uid="uid://trfw3xht0u0t"]
 
 [ext_resource type="Script" path="res://Level/testing.gd" id="1_pdg3e"]
 [ext_resource type="PackedScene" uid="uid://b0n72sbo62t8e" path="res://PlayerScene/Player.tscn" id="2_h5tvg"]
-[ext_resource type="PackedScene" uid="uid://jqete65bseyw" path="res://PlatformScenes/Placeholderplatform.tscn" id="3_lghec"]
-[ext_resource type="PackedScene" uid="uid://05ywuc8hih17" path="res://PlatformScenes/hideablePlatform.tscn" id="4_okhb1"]
+[ext_resource type="PackedScene" uid="uid://jqete65bseyw" path="res://ObjectScenes/Placeholderplatform.tscn" id="3_lghec"]
+[ext_resource type="PackedScene" uid="uid://05ywuc8hih17" path="res://ObjectScenes/hideablePlatform.tscn" id="4_okhb1"]
+[ext_resource type="PackedScene" uid="uid://bggk2p4lta32p" path="res://ObjectScenes/pickables.tscn" id="5_t5ccj"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_pdg3e")
@@ -20,9 +21,21 @@ position = Vector2(33, 393)
 scale = Vector2(1.46357, 0.88)
 
 [node name="HideablePlatform" parent="." instance=ExtResource("4_okhb1")]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
 position = Vector2(508, 280)
 scale = Vector2(1.93369, 11.28)
 
+[node name="HideablePlatform3" parent="." instance=ExtResource("4_okhb1")]
+position = Vector2(640, 274)
+scale = Vector2(1.93369, 11.28)
+keyplatform = true
+
 [node name="HideablePlatform2" parent="." instance=ExtResource("4_okhb1")]
+modulate = Color(0.00164585, 0.000428668, 4.70027e-11, 1)
 position = Vector2(1018, 564)
 scale = Vector2(6.06752, -2.04426)
+
+[node name="Pickables" parent="." instance=ExtResource("5_t5ccj")]
+position = Vector2(317, 320)
+scale = Vector2(6, 6)
